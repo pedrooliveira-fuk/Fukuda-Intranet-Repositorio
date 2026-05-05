@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 :root {
     --vermelho: #8B0000;
@@ -11,6 +12,18 @@
     --branco: #ffffff;
     --texto-sec: #555555;
     --borda: #dddddd;
+}
+
+/* 🔥 ESSENCIAL */
+* {
+    box-sizing: border-box;
+}
+
+/* WRAPPER */
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -26,7 +39,7 @@ body {
                 url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
     background-size: cover;
     background-position: center;
-    padding: 80px 40px;
+    padding: 40px 20px;
 }
 
 .hero h1 {
@@ -42,15 +55,14 @@ body {
 
 /* SEARCH */
 .search-box {
-    margin-top: 25px;
+    margin-top: 20px;
     max-width: 400px;
-    position: relative;
 }
 
 .search-input {
     width: 100%;
-    padding: 10px 16px; /* igual card */
-    border-radius: 12px; /* igual card */
+    padding: 10px 16px;
+    border-radius: 12px;
     border: 1px solid var(--borda);
     background: var(--branco);
     color: var(--preto);
@@ -58,13 +70,11 @@ body {
     outline: none;
 }
 
-/* mesmo efeito hover do card */
 .search-input:hover {
     border-color: var(--vermelho);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-/* foco mais elegante */
 .search-input:focus {
     border-color: var(--vermelho);
 }
@@ -72,9 +82,8 @@ body {
 /* CONTAINER */
 .container {
     max-width: 900px;
-    margin: -40px auto 40px;
-    padding: 0 20px;
-    color: #ffffff;
+    margin: -20px auto 40px;
+    padding: 0 16px;
 }
 
 /* CARD */
@@ -113,7 +122,6 @@ body {
 /* TEXT */
 .label {
     font-weight: 600;
-    color: var(--preto);
 }
 
 .desc {
@@ -127,13 +135,44 @@ body {
     color: var(--texto-sec);
     font-size: 20px;
 }
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 25px 15px;
+    }
+
+    .container {
+        margin-top: -10px;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    .icon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+}
 </style>
 </head>
+
 <body>
+
+<div class="wrapper">
+
 <!-- HERO -->
 <div class="hero">
     <h1>Início - Arquitetura de Governança de Dados e Informações – Fukuda Company</h1>
     <p>Central de documentos, processos e governança da Fukuda Company.</p>
+
     <div class="search-box">
         <input class="search-input" placeholder="Pesquisar no portal...">
     </div>
@@ -142,7 +181,7 @@ body {
 <!-- MENU PRINCIPAL -->
 <div class="container">
 
-    <a href="https://sites.google.com/fukuda.co/arquitetura-de-governana-de-da/1-0-governan%C3%A7a-regras-da-empresa" class="card">
+    <a href="https://sites.google.com/fukuda.co/arquitetura-de-governana-de-da/1-0-governan%C3%A7a-regras-da-empresa" target="_top" class="card">
         <div class="icon">📘</div>
         <div>
             <div class="label">1.0 Governança</div>
@@ -151,7 +190,7 @@ body {
         <div class="arrow">›</div>
     </a>
 
-    <a href="/estrategia" target="_parent" class="card">
+    <a href="/estrategia" target="_top" class="card">
         <div class="icon">🎯</div>
         <div>
             <div class="label">2.0 Estratégia</div>
@@ -160,7 +199,7 @@ body {
         <div class="arrow">›</div>
     </a>
 
-    <a href="/gestao" target="_parent" class="card">
+    <a href="/gestao" target="_top" class="card">
         <div class="icon">📊</div>
         <div>
             <div class="label">3.0 Gestão</div>
@@ -169,7 +208,7 @@ body {
         <div class="arrow">›</div>
     </a>
 
-    <a href="/contratos" target="_parent" class="card">
+    <a href="/contratos" target="_top" class="card">
         <div class="icon">📄</div>
         <div>
             <div class="label">4.0 Contratos</div>
@@ -178,7 +217,7 @@ body {
         <div class="arrow">›</div>
     </a>
 
-    <a href="/institucional" target="_parent" class="card">
+    <a href="/institucional" target="_top" class="card">
         <div class="icon">🏢</div>
         <div>
             <div class="label">5.0 Institucional</div>
@@ -187,7 +226,7 @@ body {
         <div class="arrow">›</div>
     </a>
 
-    <a href="/reunioes" target="_parent" class="card">
+    <a href="/reunioes" target="_top" class="card">
         <div class="icon">🗂️</div>
         <div>
             <div class="label">6.0 Reuniões</div>
@@ -195,6 +234,8 @@ body {
         </div>
         <div class="arrow">›</div>
     </a>
+
+</div>
 
 </div>
 
