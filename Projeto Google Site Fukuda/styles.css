@@ -1,5 +1,5 @@
 :root {
-    --vermelho: #8B0000;
+    --vermelho: #9B2335;
     --preto: #000000;
     --cinza: #ffffff;
     --branco: #ffffff;
@@ -20,8 +20,8 @@ body {
                 url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
     background-size: cover;
     background-position: center;
-    padding: 80px 40px;
-    margin-bottom: 50px
+    padding: 40px 20px;
+    margin-bottom: 40px
 }
 
 .hero h1 {
